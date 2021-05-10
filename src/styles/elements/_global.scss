@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+}
+
+
+
+body {
+    @include colors();
+    
+    background-color: $-c-body;
+    color: $-c-text;
+    font-size: 2rem;
+    transition: all 0.2s;
+}
