@@ -2,6 +2,9 @@ import React, { FC } from 'react';
 import { useForm } from 'react-hook-form';
 
 import Layout from 'Components/Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'Reducers/types';
+import LoginService from 'Api/LoginService';
 
 type FormData = {
     username: string;
@@ -9,12 +12,17 @@ type FormData = {
 };
 
 const LoginPage: FC = () => {
+    const dispatch = useDispatch();
+
     const {
         register,
         handleSubmit,
         formState: { errors }
     } = useForm<FormData>();
-    const onSubmit = handleSubmit((data) => console.log(data));
+
+    const logged = useSelector((state: RootState) => state.login);
+
+    const onSubmit = handleSubmit((data) => LoginService.login(dispatch, data));
     return (
         <Layout>
             <form className="form form--login" onSubmit={onSubmit}>
@@ -33,6 +41,10 @@ const LoginPage: FC = () => {
                 {errors.password && <span>Password required</span>}
                 <button className="btn btn--success">Submit</button>
             </form>
+
+            {logged.error && <div>User not found!</div>}
+            {!logged.error && logged.loading && <div>Loading...</div>}
+            {!logged.error && logged.loggedUser && <div>{logged.loggedUser.username}</div>}
         </Layout>
     );
 };

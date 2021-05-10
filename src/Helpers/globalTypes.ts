@@ -15,8 +15,9 @@ export interface post {
 
 export interface loggedUser {
     username: string;
-    token: string;
-    id: number;
+    token?: string;
+    id?: number;
+    password?: string;
 }
 
 export interface RouteProps {

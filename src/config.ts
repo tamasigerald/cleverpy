@@ -3,5 +3,11 @@ export const config = {
     endpoints: {
         users: 'users',
         posts: 'posts'
+    },
+    admin: {
+        username: 'admin',
+        password: 'admin',
+        id: '78sdafhiuasdfafsd',
+        token: 'faketoken'
     }
 };

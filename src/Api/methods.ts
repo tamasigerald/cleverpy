@@ -1,3 +1,4 @@
+import { loggedUser } from './../Helpers/globalTypes';
 import axios from 'axios';
 
 import { config } from 'config';

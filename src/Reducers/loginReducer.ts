@@ -2,7 +2,7 @@ import { ActionType } from 'Reducers/types';
 import { StateType } from './types';
 
 const initialState: StateType = {
-    loading: true,
+    loading: false,
     logged: false,
     loggedUser: null,
     error: false
