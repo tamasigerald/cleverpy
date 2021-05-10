@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
+
 import PublicRoute from './PublicRoute';
+import PrivateRoute from './PrivateRoute';
 
 import LoginPage from 'Pages/Login/LoginPage';
-import PrivateRoute from './PrivateRoute';
 import DashboardPage from 'Pages/Dashboard/DashboardPage';
 import AccountPage from 'Pages/Account/AccountPage';
 import PostPage from 'Pages/Post/PostPage';
