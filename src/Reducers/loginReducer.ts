@@ -15,7 +15,7 @@ export function loginReducer(state = initialState, action: ActionType): StateTyp
         case 'POST_LOGIN':
             return {
                 ...state,
-                loggedUser: action.payload,
+                loggedUser: action.loggedUser,
                 logged: true,
                 loading: false,
                 error: false

@@ -5,14 +5,15 @@ export interface StateType {
     posts?: [] | null;
     users?: [] | null;
     logged?: boolean;
-    loggedUser?: loggedUser | null | [];
+    loggedUser?: loggedUser | null;
     loading: boolean;
     error: boolean;
 }
 
 export interface ActionType {
     type: string;
-    payload: [] | null | loggedUser;
+    payload?: [] | null;
+    loggedUser?: loggedUser | null;
 }
 
 export type RootState = ReturnType<typeof rootReducer>;
