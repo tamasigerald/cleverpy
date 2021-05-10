@@ -1,0 +1,24 @@
+@mixin colors {
+    --c-body: #eeeeee;
+    --c-text: #202630;
+    --c-green: #4c9596;
+    --c-red: #b63e35;
+    --c-gray: #555a74;
+    --c-primary: #fdd261;
+
+    
+
+    &[data-dark-mode] {
+        --c-body: #202630;
+        --c-text: #eeeeee;
+        --c-green: #30947b;
+        --c-red: #a03028;
+        --c-gray: #4d5063;
+        --c-primary: #e2b74a;
+    }
+}
+
+$-c-body: var(--c-body);
+$-c-text: var(--c-text);
+$-c-primary: var(--c-primary);
+$-c-secondary: var(--c-secondary);

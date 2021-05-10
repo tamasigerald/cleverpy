@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+}
+
+
+
+body {
+    @include colors();
+    
+    background-color: $-c-body;
+    color: $-c-text;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: $-t-regular;
+    transition: all 0.2s;
+}

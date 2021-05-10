@@ -7,6 +7,9 @@ import reportWebVitals from 'reportWebVitals';
 import rootReducer from 'Reducers';
 import { Provider } from 'react-redux';
 
+import 'reset.css';
+import 'styles/styles.scss';
+
 const store = createStore(rootReducer);
 
 ReactDOM.render(
