@@ -4,10 +4,9 @@ import { Route, Redirect } from 'react-router-dom';
 
 import { RootState } from 'Reducers/types';
 
-const PublicRoute: FC = ({ children, ...rest }): JSX.Element => {
+const PrivateRoute: FC = ({ children, ...rest }): JSX.Element => {
     const logged = useSelector((state: RootState) => state.login);
-
-    return <Route {...rest}>{!logged.logged ? children : <Redirect to="/dashboard" />}</Route>;
+    return <Route {...rest}>{logged.logged ? children : <Redirect to="/login" />}</Route>;
 };
 
-export default PublicRoute;
+export default PrivateRoute;
