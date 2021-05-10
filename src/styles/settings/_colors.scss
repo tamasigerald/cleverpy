@@ -1,5 +1,5 @@
 @mixin colors {
-    --c-body: #eeeeee;
+    --c-body: #e9e9e9;
     --c-text: #202630;
     --c-green: #4c9596;
     --c-red: #b63e35;
@@ -12,7 +12,7 @@
 
     &[data-dark-mode] {
         --c-body: #202630;
-        --c-text: #eeeeee;
+        --c-text: #e9e9e9;
         --c-green: #30947b;
         --c-red: #a03028;
         --c-gray: #4d5063;

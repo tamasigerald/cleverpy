@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: $-s-xs;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+
+    &__toggler {
+        flex: 1;
+    }
+}
