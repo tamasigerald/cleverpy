@@ -2,27 +2,27 @@ import methods from './methods';
 import { config } from 'config';
 import { Dispatch } from './types';
 
-const UserService = {
-    getUsers(dispatch: Dispatch): void {
+const PostService = {
+    getPosts(dispatch: Dispatch): void {
         dispatch({
-            type: 'LOAD_USERS',
+            type: 'LOAD_POSTS',
             payload: null
         });
         methods
-            .get(config.endpoints.users)
+            .get(config.endpoints.posts)
             .then((users) => {
                 dispatch({
-                    type: 'GET_USERS',
+                    type: 'GET_POSTS',
                     payload: users
                 });
             })
             .catch(() => {
                 dispatch({
-                    type: 'ERROR_USERS',
+                    type: 'ERROR_POSTS',
                     payload: null
                 });
             });
     }
 };
 
-export default UserService;
+export default PostService;
