@@ -12,3 +12,9 @@ export interface post {
     body: string;
     author: string;
 }
+
+export interface loggedUser {
+    username: string;
+    token: string;
+    id: number;
+}
