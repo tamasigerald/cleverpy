@@ -10,6 +10,7 @@ const LoginService = {
         });
         if (user.username === config.admin.username && user.password === config.admin.password) {
             setTimeout(() => {
+                window.localStorage.setItem('token', config.admin.token);
                 dispatch({
                     type: 'POST_LOGIN',
                     loggedUser: user
@@ -19,6 +20,14 @@ const LoginService = {
             dispatch({
                 type: 'ERROR_LOGIN',
                 loggedUser: null
+            });
+        }
+    },
+    checkLogin(dispatch: Dispatch, token: string): void {
+        if (token) {
+            dispatch({
+                type: 'CHECK_LOGIN',
+                loggedUser: { username: config.admin.username }
             });
         }
     }

@@ -20,6 +20,14 @@ export function loginReducer(state = initialState, action: ActionType): StateTyp
                 loading: false,
                 error: false
             };
+        case 'CHECK_LOGIN':
+            return {
+                ...state,
+                loggedUser: action.loggedUser,
+                logged: true,
+                loading: false,
+                error: false
+            };
         case 'ERROR_LOGIN':
             return { ...state, loggedUser: null, logged: false, loading: false, error: true };
         default:

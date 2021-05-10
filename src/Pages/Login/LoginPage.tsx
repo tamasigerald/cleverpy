@@ -29,22 +29,19 @@ const LoginPage: FC = () => {
                 <h1 className="form__title">Login:</h1>
                 {logged.error && <div className="form__error">User not found!</div>}
                 <input
-                    className="input"
+                    className={`input ${errors.username ? 'input--error' : ''}`}
                     placeholder="username"
                     {...register('username', { required: true })}
                 />
                 {errors.username && <span className="form__error">Username required</span>}
                 <input
-                    className="input"
+                    className={`input ${errors.password ? 'input--error' : ''}`}
                     placeholder="password"
                     {...register('password', { required: true })}
                 />
                 {errors.password && <span className="form__error">Password required</span>}
                 <button className="btn btn--success">Submit</button>
             </form>
-
-            {!logged.error && logged.loading && <div>Loading...</div>}
-            {!logged.error && logged.loggedUser && <div>{logged.loggedUser.username}</div>}
         </Layout>
     );
 };
