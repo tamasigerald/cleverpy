@@ -1,0 +1,10 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: $-s-sm;
+
+    @include bp-sm {
+        padding: $-s-lg;
+    }
+}

@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 
 import ThemeButton from 'Components/ThemeButton';
+import Layout from 'Components/Layout';
 
 const LoginPage: FC = () => {
     return (
-        <div>
+        <Layout>
             Login page
             <ThemeButton />
-        </div>
+        </Layout>
     );
 };
 
