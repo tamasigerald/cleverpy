@@ -11,4 +11,10 @@
         font-weight: $-t-medium;
         padding-bottom: $-s-sm;
     }
+
+    &__error {
+        color: $-c-red;
+        text-align: center;
+        padding-bottom: $-s-xs;
+    }
 }

@@ -27,22 +27,22 @@ const LoginPage: FC = () => {
         <Layout>
             <form className="form form--login" onSubmit={onSubmit}>
                 <h1 className="form__title">Login:</h1>
+                {logged.error && <div className="form__error">User not found!</div>}
                 <input
                     className="input"
                     placeholder="username"
                     {...register('username', { required: true })}
                 />
-                {errors.username && <span>Username required</span>}
+                {errors.username && <span className="form__error">Username required</span>}
                 <input
                     className="input"
                     placeholder="password"
                     {...register('password', { required: true })}
                 />
-                {errors.password && <span>Password required</span>}
+                {errors.password && <span className="form__error">Password required</span>}
                 <button className="btn btn--success">Submit</button>
             </form>
 
-            {logged.error && <div>User not found!</div>}
             {!logged.error && logged.loading && <div>Loading...</div>}
             {!logged.error && logged.loggedUser && <div>{logged.loggedUser.username}</div>}
         </Layout>

@@ -2,7 +2,7 @@ import { StateType, ActionType } from './types';
 
 const initialState: StateType = {
     posts: [],
-    loading: true,
+    loading: false,
     error: false
 };
 

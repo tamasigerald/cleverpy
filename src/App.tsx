@@ -1,4 +1,5 @@
 import Header from 'Components/Header';
+import Loader from 'Components/Loader';
 import React, { FC } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -9,6 +10,7 @@ const App: FC = () => {
         <Router>
             <Header />
             <Routes />
+            <Loader />
         </Router>
     );
 };
