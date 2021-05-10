@@ -18,3 +18,9 @@ export interface loggedUser {
     token: string;
     id: number;
 }
+
+export interface RouteProps {
+    children: React.ReactNode;
+    path?: string;
+    exact?: boolean;
+}
