@@ -30,14 +30,20 @@
             width: 26px;
             left: 4px;
             bottom: 4px;
-            background-color: $-c-yellow;
+            background-color: $-c-green;
             -webkit-transition: .4s;
             transition: .4s;
+
+            
+        }
+
+        body[data-dark-mode] &::before {
+            background-color: $-c-yellow;
         }
     }
 
     &__input:checked + &__slider {
-        background-color: $-c-text;
+        background-color: $-c-green;
     }
     
     &__input:focus + &__slider {
