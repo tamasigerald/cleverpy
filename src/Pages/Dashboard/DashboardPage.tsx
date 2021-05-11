@@ -8,6 +8,7 @@ import PostCard from 'Components/PostCard';
 
 import { RootState } from 'Reducers/types';
 import { post } from 'Helpers/globalTypes';
+import Footer from 'Components/Footer';
 
 const DashboardPage: FC = () => {
     const dispatch = useDispatch();
@@ -24,16 +25,19 @@ const DashboardPage: FC = () => {
     useEffect(getData, [dispatch]);
 
     return (
-        <Layout>
-            {!postsError && posts && (
-                <div className="card__wrapper">
-                    {posts.map((post: post, i) => (
-                        <PostCard key={i} users={users} post={post} />
-                    ))}
-                </div>
-            )}
-            {postsError && <div>Error! Cannot retrieve data from server.</div>}
-        </Layout>
+        <>
+            <Layout>
+                {!postsError && posts && (
+                    <div className="card__wrapper">
+                        {posts.map((post: post, i) => (
+                            <PostCard key={i} users={users} post={post} />
+                        ))}
+                    </div>
+                )}
+                {postsError && <div>Error! Cannot retrieve data from server.</div>}
+            </Layout>
+            <Footer />
+        </>
     );
 };
 

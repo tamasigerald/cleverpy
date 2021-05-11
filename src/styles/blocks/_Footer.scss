@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: $-c-body;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100vw;
+
+    &__icon {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        padding: $-s-sm;
+    }
+
+    @include bp-md {
+        display: none;
+    }
+}
