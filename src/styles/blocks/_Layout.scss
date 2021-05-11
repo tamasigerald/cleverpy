@@ -3,10 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding: $-s-sm;
-
-    @include bp-sm {
-        padding: $-s-lg;
-    }
+    min-height: 100vh;
+    padding: $-s-md $-s-sm;
+    padding-top: 60px;
 }

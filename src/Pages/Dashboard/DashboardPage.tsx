@@ -25,9 +25,13 @@ const DashboardPage: FC = () => {
 
     return (
         <Layout>
-            {!postsError &&
-                posts &&
-                posts.map((post: post, i) => <PostCard key={i} users={users} post={post} />)}
+            {!postsError && posts && (
+                <div className="card__wrapper">
+                    {posts.map((post: post, i) => (
+                        <PostCard key={i} users={users} post={post} />
+                    ))}
+                </div>
+            )}
             {postsError && <div>Error! Cannot retrieve data from server.</div>}
         </Layout>
     );

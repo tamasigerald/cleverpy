@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import { post } from 'Helpers/globalTypes';
 import getUsername from 'Helpers/getUsername';
+import { Link } from 'react-router-dom';
 
 type PostCardType = {
     children?: React.ReactNode;
@@ -12,8 +13,14 @@ type PostCardType = {
 const PostCard: FC<PostCardType> = ({ post, users }) => {
     return (
         <div className="card card-post">
-            <div>{post.title}</div>
-            <div>{getUsername(users, post)}</div>
+            <Link to={`/post/${post.id}`} className="card__title">
+                {post.title}
+            </Link>
+            <div className="card__author">{getUsername(users, post)}</div>
+            <div className="card__action">
+                <div className="btn-action">Edit</div>
+                <div className="btn-action btn-action--delete">Delete</div>
+            </div>
         </div>
     );
 };

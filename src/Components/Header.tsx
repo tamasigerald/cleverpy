@@ -7,11 +7,9 @@ const Header: FC = () => {
     const logged = useSelector((state: RootState) => state.login.logged);
     return (
         <header className="header">
-            {!logged && (
-                <div className="header__toggler">
-                    <ThemeButton />
-                </div>
-            )}
+            <div className="header__toggler">
+                <ThemeButton />
+            </div>
 
             {logged && <div>Menu</div>}
         </header>

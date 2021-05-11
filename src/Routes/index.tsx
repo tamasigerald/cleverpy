@@ -19,7 +19,7 @@ const Routes: FC = () => {
             <PrivateRoute exact path="/dashboard">
                 <DashboardPage />
             </PrivateRoute>
-            <PrivateRoute exact path="/post">
+            <PrivateRoute exact path="/post/:id">
                 <PostPage />
             </PrivateRoute>
             <PrivateRoute exact path="/user">
