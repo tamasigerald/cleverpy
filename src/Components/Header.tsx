@@ -1,7 +1,10 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'Reducers/types';
+import { BiLogOut } from 'react-icons/bi';
+
 import ThemeButton from './ThemeButton';
+import Menu from './Menu';
 
 const Header: FC = () => {
     const logged = useSelector((state: RootState) => state.login.logged);
@@ -11,7 +14,8 @@ const Header: FC = () => {
                 <ThemeButton />
             </div>
 
-            {logged && <div>Menu</div>}
+            {logged && <Menu />}
+            {logged && <BiLogOut className="icon icon--logout" />}
         </header>
     );
 };

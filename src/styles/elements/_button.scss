@@ -26,13 +26,24 @@
         margin-left: $-s-xxs;
         text-decoration: underline;
         transition: 0.2s;
-
+        
         &:hover {
             color: $-c-gray-40;
         }
-
+        
         &--delete:hover {
             color: $-c-red-20;
+        }
+        
+        &--menu {
+            margin-top: 0;
+            margin-left: 0;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        &--menu {
+            color: $-c-red;
         }
     }
 }

@@ -1,0 +1,18 @@
+.icon {
+    color: $-c-text;
+
+    &--burger {
+        cursor: pointer;
+        transform: scale(2);
+    }
+
+    &--logout {
+        display: none;
+        color: $-c-red;
+        transform: scale(1.5);
+
+        @include bp-md {
+            display: inline;
+        }
+    }
+}
