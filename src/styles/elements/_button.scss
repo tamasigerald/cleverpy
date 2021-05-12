@@ -46,4 +46,20 @@
             color: $-c-red;
         }
     }
+
+    &-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        border: none;
+        border-radius: 50%;
+        background-color: $-c-green;
+        cursor: pointer;
+        height: $-s-lg;
+        width: $-s-lg;
+        bottom: $-s-xs;
+        left: $-s-xs;
+        padding: 0;
+    }
 }

@@ -7,6 +7,7 @@ import Loader from 'Components/Loader';
 import Routes from 'Routes';
 
 import checkLocalUser from 'Helpers/checkLocalUser';
+import BackButton from 'Components/BackButton';
 
 const App: FC = () => {
     const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const App: FC = () => {
             <Header />
             <Routes />
             <Loader />
+            <BackButton />
         </Router>
     );
 };
