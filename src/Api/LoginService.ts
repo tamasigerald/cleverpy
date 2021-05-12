@@ -30,6 +30,12 @@ const LoginService = {
                 loggedUser: { username: config.admin.username }
             });
         }
+    },
+    logout(dispatch: Dispatch): void {
+        window.localStorage.removeItem('token');
+        dispatch({
+            type: 'LOGOUT_LOGIN'
+        });
     }
 };
 

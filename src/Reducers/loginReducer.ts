@@ -28,6 +28,14 @@ export function loginReducer(state = initialState, action: ActionType): StateTyp
                 loading: false,
                 error: false
             };
+        case 'LOGOUT_LOGIN':
+            return {
+                ...state,
+                loggedUser: null,
+                logged: false,
+                loading: false,
+                error: false
+            };
         case 'ERROR_LOGIN':
             return { ...state, loggedUser: null, logged: false, loading: false, error: true };
         default:

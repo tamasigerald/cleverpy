@@ -1,15 +1,21 @@
 .icon {
     color: $-c-text;
+    cursor: pointer;
 
     &--burger {
-        cursor: pointer;
         transform: scale(2);
     }
 
     &--logout {
         display: none;
         color: $-c-red;
-        transform: scale(1.5);
+        transform: scale(1.8);
+        transition: 0.2s;
+        margin-right: $-s-xxxs;
+
+        &:hover {
+            color: $-c-red-20;
+        }
 
         @include bp-md {
             display: inline;

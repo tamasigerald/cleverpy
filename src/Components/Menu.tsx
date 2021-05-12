@@ -1,6 +1,10 @@
 import React, { FC, useState } from 'react';
 
-const Menu: FC = () => {
+type MenuProps = {
+    logoutAction?: () => void;
+};
+
+const Menu: FC<MenuProps> = ({ logoutAction }) => {
     const [menu, setMenu] = useState(false);
 
     const toggelMenu = () => {
@@ -17,7 +21,11 @@ const Menu: FC = () => {
                 <div className="menu__burger__bar3"></div>
             </div>
             <div className={`menu__list ${menu ? 'menu__list__active' : ''}`}>
-                <div className="btn-action btn-action--menu btn-action--logout">Log out</div>
+                <div
+                    onClick={logoutAction}
+                    className="btn-action btn-action--menu btn-action--logout">
+                    Log out
+                </div>
             </div>
         </div>
     );
