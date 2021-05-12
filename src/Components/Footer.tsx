@@ -8,7 +8,7 @@ const Footer: FC = () => {
         <footer className="footer">
             <BiSearch className="icon footer__icon" />
             <BiMessageAdd onClick={() => history.push('/add')} className="icon footer__icon" />
-            <BiUser className="icon footer__icon" />
+            <BiUser onClick={() => history.push('/account')} className="icon footer__icon" />
         </footer>
     );
 };

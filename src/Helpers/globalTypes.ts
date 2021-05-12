@@ -16,7 +16,7 @@ export interface post {
 export interface loggedUser {
     username: string;
     token?: string;
-    id?: number;
+    id?: number | string;
     password?: string;
 }
 

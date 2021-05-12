@@ -27,7 +27,7 @@ const LoginService = {
         if (token) {
             dispatch({
                 type: 'CHECK_LOGIN',
-                loggedUser: { username: config.admin.username }
+                loggedUser: { username: config.admin.username, id: config.admin.id }
             });
         }
     },
