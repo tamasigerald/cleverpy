@@ -12,9 +12,13 @@ const PostService = {
         methods
             .get(config.endpoints.posts)
             .then((posts) => {
+                /* The next two lines, makes added posts persisten through localStorage
+                to fake a post method on redux state */
+                const localPosts: [] = JSON.parse(localStorage.getItem('posts') || '[]');
+                const result = [...posts, ...localPosts] as [];
                 dispatch({
                     type: 'GET_POSTS',
-                    payload: posts
+                    payload: result
                 });
             })
             .catch(() => {
