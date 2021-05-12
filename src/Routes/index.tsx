@@ -29,7 +29,7 @@ const Routes: FC = () => {
                 <AccountPage />
             </PrivateRoute>
             <Route path="*">
-                <Redirect to="login" />
+                <Redirect to="/login" />
             </Route>
         </Switch>
     );
