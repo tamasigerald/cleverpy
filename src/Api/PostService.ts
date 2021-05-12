@@ -11,7 +11,7 @@ const PostService = {
         });
         methods
             .get(config.endpoints.posts)
-            .then((posts) => {
+            .then((posts: []) => {
                 /* The next two lines, makes added posts persisten through localStorage
                 to fake a post method on redux state */
                 const localPosts: [] = JSON.parse(localStorage.getItem('posts') || '[]');
@@ -19,6 +19,28 @@ const PostService = {
                 dispatch({
                     type: 'GET_POSTS',
                     payload: result
+                });
+            })
+            .catch(() => {
+                dispatch({
+                    type: 'ERROR_POSTS',
+                    payload: null
+                });
+            });
+    },
+    getPost(dispatch: Dispatch, id: string): void {
+        dispatch({
+            type: 'LOAD_POSTS',
+            payload: null
+        });
+        methods
+            .get(config.endpoints.posts + `/${id}`)
+            .then((post: post) => {
+                const result = [];
+                result.push(post);
+                dispatch({
+                    type: 'GET_POSTS',
+                    payload: result as []
                 });
             })
             .catch(() => {
