@@ -3,14 +3,21 @@ import React, { FC } from 'react';
 import { post } from 'Helpers/globalTypes';
 import getUsername from 'Helpers/getUsername';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import PostService from 'Api/PostService';
 
 type PostCardType = {
     children?: React.ReactNode;
     post: post;
     users: [] | null | undefined;
+    posts: [];
 };
 
-const PostCard: FC<PostCardType> = ({ post, users }) => {
+const PostCard: FC<PostCardType> = ({ post, users, posts }) => {
+    const dispatch = useDispatch();
+    const deletePost = (id: number, posts: []) => {
+        PostService.deletePost(dispatch, id, posts);
+    };
     return (
         <div className="card card-post">
             <Link to={`/post/${post.id}`} className="card__title">
@@ -19,7 +26,9 @@ const PostCard: FC<PostCardType> = ({ post, users }) => {
             <div className="card__author">{getUsername(users, post)}</div>
             <div className="card__action">
                 <div className="btn-action">Edit</div>
-                <div className="btn-action btn-action--delete">Delete</div>
+                <div onClick={() => deletePost(post.id, posts)} className="btn-action">
+                    Delete
+                </div>
             </div>
         </div>
     );

@@ -30,7 +30,7 @@ const DashboardPage: FC = () => {
                 {!postsError && posts && (
                     <div className="card__wrapper">
                         {posts.map((post: post, i) => (
-                            <PostCard key={i} users={users} post={post} />
+                            <PostCard key={i} users={users} posts={posts} post={post} />
                         ))}
                     </div>
                 )}
