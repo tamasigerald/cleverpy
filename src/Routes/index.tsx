@@ -9,6 +9,7 @@ import DashboardPage from 'Pages/Dashboard/DashboardPage';
 import AccountPage from 'Pages/Account/AccountPage';
 import PostPage from 'Pages/Post/PostPage';
 import UserPage from 'Pages/User/UserPage';
+import AddPostPage from 'Pages/AddPost/AddPostPage';
 
 const Routes: FC = () => {
     return (
@@ -27,6 +28,9 @@ const Routes: FC = () => {
             </PrivateRoute>
             <PrivateRoute exact path="/account">
                 <AccountPage />
+            </PrivateRoute>
+            <PrivateRoute exact path="/add">
+                <AddPostPage />
             </PrivateRoute>
             <Route path="*">
                 <Redirect to="/login" />
