@@ -8,7 +8,7 @@ import { RootState } from 'Reducers/types';
 const AccountPage: FC = () => {
     const loggedUser = useSelector((state: RootState) => state.login.loggedUser);
     return (
-        <Layout>
+        <Layout center>
             <div className="account">
                 <img
                     className="account__avatar"

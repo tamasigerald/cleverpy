@@ -56,10 +56,15 @@
         border-radius: 50%;
         background-color: $-c-green;
         cursor: pointer;
-        height: $-s-lg;
-        width: $-s-lg;
+        height: $-s-xxl;
+        width: $-s-xxl;
         bottom: $-s-xs;
-        left: $-s-xs;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 0;
+
+        &:hover {
+            transform: translate(-50%, -2px);
+        }
     }
 }

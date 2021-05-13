@@ -1,7 +1,11 @@
 import React, { FC } from 'react';
 
-const Layout: FC = ({ children }) => {
-    return <main className="layout">{children}</main>;
+type LayoutProps = {
+    center?: boolean;
+};
+
+const Layout: FC<LayoutProps> = ({ children, center }) => {
+    return <main className={`layout ${center ? 'layout--center' : ''}`}>{children}</main>;
 };
 
 export default Layout;

@@ -24,7 +24,7 @@ const LoginPage: FC = () => {
 
     const onSubmit = handleSubmit((data) => LoginService.login(dispatch, data));
     return (
-        <Layout>
+        <Layout center>
             <form className="form form--login" onSubmit={onSubmit}>
                 <h1 className="form__title">Login:</h1>
                 {logged.error && <div className="form__error">User not found!</div>}

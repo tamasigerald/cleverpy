@@ -17,4 +17,15 @@
         border: 1px solid $-c-red !important;
         box-shadow: 0px 0px 5px 0px $-c-red !important;
     }
+
+    &--search {
+        display: none;
+        margin: $-s-md 0;
+        width: 100%;
+        max-width: 300px;
+
+        &--show {
+            display: block;
+        }
+    }
 }
