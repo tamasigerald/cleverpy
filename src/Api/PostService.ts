@@ -14,6 +14,7 @@ const PostService = {
             .then((posts: []) => {
                 /* The next two lines, makes added posts persisten through localStorage
                 to fake a post method on redux state */
+                // This is for later use to fake add post
                 const localPosts: [] = JSON.parse(localStorage.getItem('posts') || '[]');
                 const result = [...posts, ...localPosts] as [];
                 dispatch({

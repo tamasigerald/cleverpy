@@ -8,7 +8,6 @@ import LoginPage from 'Pages/Login/LoginPage';
 import DashboardPage from 'Pages/Dashboard/DashboardPage';
 import AccountPage from 'Pages/Account/AccountPage';
 import PostPage from 'Pages/Post/PostPage';
-import UserPage from 'Pages/User/UserPage';
 import AddPostPage from 'Pages/AddPost/AddPostPage';
 
 const Routes: FC = () => {
@@ -22,9 +21,6 @@ const Routes: FC = () => {
             </PrivateRoute>
             <PrivateRoute exact path="/post/:id">
                 <PostPage />
-            </PrivateRoute>
-            <PrivateRoute exact path="/user">
-                <UserPage />
             </PrivateRoute>
             <PrivateRoute exact path="/account">
                 <AccountPage />

@@ -1,5 +1,5 @@
 export const config = {
-    baseUrl: 'http://jsonplaceholder.typicode.com/',
+    baseUrl: 'https://jsonplaceholder.typicode.com/',
     endpoints: {
         users: 'users',
         posts: 'posts'

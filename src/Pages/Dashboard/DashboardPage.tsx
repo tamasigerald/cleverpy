@@ -5,11 +5,11 @@ import PostService from 'Api/PostService';
 import UserService from 'Api/UserService';
 import Layout from 'Components/Layout';
 import PostCard from 'Components/PostCard';
+import Footer from 'Components/Footer';
+import SideBar from 'Components/SideBar';
 
 import { RootState } from 'Reducers/types';
 import { post } from 'Helpers/globalTypes';
-import Footer from 'Components/Footer';
-import SideBar from 'Components/SideBar';
 
 const DashboardPage: FC = () => {
     const [searchValue, setSearchValue] = useState<string>('');

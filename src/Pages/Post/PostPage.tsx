@@ -5,11 +5,11 @@ import { useParams } from 'react-router';
 import Layout from 'Components/Layout';
 import PostService from 'Api/PostService';
 import UserService from 'Api/UserService';
+import CommentService from 'Api/CommentService';
 import getUsername from 'Helpers/getUsername';
 
 import { comment, post } from 'Helpers/globalTypes';
 import { RootState } from 'Reducers/types';
-import CommentService from 'Api/CommentService';
 
 type ParamsType = {
     id: string;

@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import { useForm } from 'react-hook-form';
-
-import Layout from 'Components/Layout';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from 'Reducers/types';
+
 import LoginService from 'Api/LoginService';
+import Layout from 'Components/Layout';
+
+import { RootState } from 'Reducers/types';
 
 type FormData = {
     username: string;
