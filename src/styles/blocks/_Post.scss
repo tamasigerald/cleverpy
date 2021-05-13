@@ -1,0 +1,22 @@
+.post {
+    &__title {
+        font-size: 4rem;
+        font-weight: $-t-semi;
+        padding: $-s-lg 0;
+    }
+
+    &__user {
+        color: $-c-gray-40;
+        opacity: 0.8;
+    }
+
+    &__date {
+        color: $-c-green;
+        font-size: 1.8rem;
+        margin-bottom: $-s-xxl;
+    }
+
+    &__body {
+        margin-bottom: $-s-md;
+    }
+}
