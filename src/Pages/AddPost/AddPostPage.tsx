@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import Layout from 'Components/Layout';
-import { post } from 'Helpers/globalTypes';
+import { post } from 'types/global';
 import { useDispatch } from 'react-redux';
 import PostService from 'Api/PostService';
 

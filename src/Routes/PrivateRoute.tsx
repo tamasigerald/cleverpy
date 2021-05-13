@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 
 import { RootState } from 'Reducers/types';
-import { RouteProps } from 'Helpers/globalTypes';
+import { RouteProps } from 'types/global';
 
 const PrivateRoute: FC<RouteProps> = ({ children, ...rest }): JSX.Element => {
     const logged = useSelector((state: RootState) => state.login);

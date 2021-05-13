@@ -6,7 +6,7 @@ import Layout from 'Components/Layout';
 import PostService from 'Api/PostService';
 
 import { RootState } from 'Reducers/types';
-import { post } from 'Helpers/globalTypes';
+import { post } from 'types/global';
 
 type ParamsType = {
     id: string;

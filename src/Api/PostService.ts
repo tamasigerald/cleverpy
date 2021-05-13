@@ -1,7 +1,7 @@
 import methods from './methods';
 import { config } from 'config';
 import { Dispatch } from './types';
-import { post } from 'Helpers/globalTypes';
+import { post } from 'types/global';
 
 const PostService = {
     getPosts(dispatch: Dispatch): void {

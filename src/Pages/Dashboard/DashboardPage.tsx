@@ -9,7 +9,7 @@ import Footer from 'Components/Footer';
 import SideBar from 'Components/SideBar';
 
 import { RootState } from 'Reducers/types';
-import { post } from 'Helpers/globalTypes';
+import { post } from 'types/global';
 
 const DashboardPage: FC = () => {
     const [searchValue, setSearchValue] = useState<string>('');

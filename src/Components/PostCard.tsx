@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { post } from 'Helpers/globalTypes';
+import { post } from 'types/global';
 import getUsername from 'Helpers/getUsername';
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';

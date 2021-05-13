@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 
 import Layout from 'Components/Layout';
 import PostService from 'Api/PostService';
@@ -8,7 +8,7 @@ import UserService from 'Api/UserService';
 import CommentService from 'Api/CommentService';
 import getUsername from 'Helpers/getUsername';
 
-import { comment, post } from 'Helpers/globalTypes';
+import { comment, post } from 'types/global';
 import { RootState } from 'Reducers/types';
 
 type ParamsType = {
@@ -17,6 +17,8 @@ type ParamsType = {
 
 const PostPage: FC = () => {
     const dispatch = useDispatch();
+
+    const history = useHistory();
 
     const post = useSelector((state: RootState) => state.posts);
     const users = useSelector((state: RootState) => state.users.users);
@@ -42,7 +44,11 @@ const PostPage: FC = () => {
                             <div className="post__date">19/08/2018</div>
                             <div className="post__body">{el.body}</div>
                             <div className="card__action">
-                                <div className="btn-action">Edit</div>
+                                <div
+                                    onClick={() => history.push(`/post/edit/${el.id}`)}
+                                    className="btn-action">
+                                    Edit
+                                </div>
                             </div>
                         </div>
                     ))}

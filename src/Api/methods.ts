@@ -3,8 +3,8 @@ import axios, { AxiosRequestConfig } from 'axios';
 
 import { config } from 'config';
 
-import { user } from './../Helpers/globalTypes';
-import { post } from 'Helpers/globalTypes';
+import { user } from '../types/global';
+import { post } from 'types/global';
 
 const methods = {
     // Get method

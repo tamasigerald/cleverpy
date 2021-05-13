@@ -1,5 +1,5 @@
 import rootReducer from 'Reducers';
-import { loggedUser } from './../Helpers/globalTypes';
+import { loggedUser } from '../types/global';
 
 export interface StateType {
     posts?: [] | null;

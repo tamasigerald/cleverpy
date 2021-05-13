@@ -1,5 +1,5 @@
 import { config } from 'config';
-import { loggedUser } from 'Helpers/globalTypes';
+import { loggedUser } from 'types/global';
 import { Dispatch } from './types';
 
 const LoginService = {
