@@ -10,6 +10,7 @@
     width: 100vw;
     z-index: 999;
     background-color: $-c-body;
+    transition: 0.2s;
 
     &__toggler {
         flex: 1;
