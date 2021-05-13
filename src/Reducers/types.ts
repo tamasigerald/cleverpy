@@ -6,6 +6,7 @@ export interface StateType {
     users?: [] | null;
     logged?: boolean;
     loggedUser?: loggedUser | null;
+    checked?: boolean;
     loading: boolean;
     error: boolean;
 }

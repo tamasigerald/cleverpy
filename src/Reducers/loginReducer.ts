@@ -5,7 +5,8 @@ const initialState: StateType = {
     loading: false,
     logged: false,
     loggedUser: null,
-    error: false
+    error: false,
+    checked: false
 };
 
 export function loginReducer(state = initialState, action: ActionType): StateType {
@@ -27,6 +28,13 @@ export function loginReducer(state = initialState, action: ActionType): StateTyp
                 logged: true,
                 loading: false,
                 error: false
+            };
+        case 'SET_CHECKED_LOGIN':
+            return {
+                ...state,
+                loading: false,
+                error: false,
+                checked: true
             };
         case 'LOGOUT_LOGIN':
             return {

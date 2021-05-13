@@ -23,7 +23,7 @@ const LoginService = {
             });
         }
     },
-    checkLogin(dispatch: Dispatch, token: string): void {
+    checkLogin(dispatch: Dispatch, token?: string | null): void {
         if (token) {
             dispatch({
                 type: 'CHECK_LOGIN',
