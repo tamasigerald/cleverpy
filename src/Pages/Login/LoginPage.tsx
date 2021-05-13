@@ -38,6 +38,7 @@ const LoginPage: FC = () => {
                 <input
                     className={`input ${errors.password ? 'input--error' : ''}`}
                     placeholder="password"
+                    type="password"
                     {...register('password', { required: true })}
                 />
                 {errors.password && <span className="form__error">Password required</span>}
