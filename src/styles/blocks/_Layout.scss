@@ -12,6 +12,10 @@
         justify-content: center;
     }
 
+    @include bp-md {
+        padding: $-s-xxxl $-s-xxl;
+    }
+    
     @include bp-lg {
         padding: $-s-xxxl $-s-xxl;
     }

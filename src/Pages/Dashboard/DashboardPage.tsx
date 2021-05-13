@@ -9,6 +9,7 @@ import PostCard from 'Components/PostCard';
 import { RootState } from 'Reducers/types';
 import { post } from 'Helpers/globalTypes';
 import Footer from 'Components/Footer';
+import SideBar from 'Components/SideBar';
 
 const DashboardPage: FC = () => {
     const [searchValue, setSearchValue] = useState<string>('');
@@ -49,6 +50,7 @@ const DashboardPage: FC = () => {
                 {postsError && <div>Error! Cannot retrieve data from server.</div>}
             </Layout>
             <Footer showSearch={showSearch} setShowSearch={setShowSearch} />
+            <SideBar showSearch={showSearch} setShowSearch={setShowSearch} />
         </>
     );
 };

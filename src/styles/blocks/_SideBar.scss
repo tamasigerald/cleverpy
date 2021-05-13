@@ -1,0 +1,38 @@
+.sidebar {
+    display: none;
+    position: fixed;
+    margin-top: $-s-sm;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    width: 50px;
+
+    &__icon {
+        margin: $-s-xs 0;
+        height: 30px;
+        width: 100%;
+        transition: 0.2s;
+
+        &:hover {
+            color: $-c-green;
+        }
+    }
+
+    @include bp-md {
+        display: block;
+    }
+
+    @include bp-xl {
+        width: 60px;
+
+        &__icon {
+            margin: $-s-sm 0;
+            height: 35px;
+            transition: 0.2s;
+    
+            &:hover {
+                color: $-c-green;
+            }
+        }
+    }
+}
