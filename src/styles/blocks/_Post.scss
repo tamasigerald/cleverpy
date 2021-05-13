@@ -22,4 +22,22 @@
     &__body {
         margin-bottom: $-s-sm;
     }
+
+    &-edit {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &__title {
+            min-height: 100px;
+            resize: none;
+            overflow-x: scroll;
+        }
+        
+        &__body {
+            min-height: 250px;
+            overflow-x: scroll;
+            resize: none;
+        }
+    }
 }

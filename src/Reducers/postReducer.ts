@@ -12,6 +12,8 @@ export function postReducer(state = initialState, action: ActionType): StateType
             return { ...state, posts: [], loading: true, error: false };
         case 'GET_POSTS':
             return { ...state, posts: action.payload, loading: false, error: false };
+        case 'EDIT_POSTS':
+            return { ...state, posts: action.payload, loading: false, error: false };
         case 'ERROR_POSTS':
             return { ...state, posts: [], loading: false, error: true };
         default:

@@ -51,6 +51,20 @@ const PostService = {
                 });
             });
     },
+    editPost(dispatch: Dispatch, data: post): void {
+        // Should be called methods.put
+        dispatch({
+            type: 'LOAD_POSTS',
+            payload: null
+        });
+        const result = ([data] as unknown) as [];
+        dispatch({
+            type: 'GET_POSTS',
+            payload: result
+        });
+        // we can also call getPost to update data rendered
+        // Or we can call the same function on the rendered component on submit
+    },
     deletePost(dispatch: Dispatch, id: number, posts: []): void {
         dispatch({
             type: 'LOAD_POSTS',
