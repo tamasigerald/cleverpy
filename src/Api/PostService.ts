@@ -51,15 +51,32 @@ const PostService = {
                 });
             });
     },
+    addPost(dispatch: Dispatch, data: post): void {
+        // Should be called methods.post
+        dispatch({
+            type: 'LOAD_POSTS',
+            payload: null
+        });
+        // Faking add post and make it persisten on localstorage
+        const localPosts: [] = JSON.parse(localStorage.getItem('posts') || '[]');
+        const newLocalPosts = [...localPosts, data];
+        localStorage.setItem('posts', JSON.stringify(newLocalPosts));
+        const result = ([data] as unknown) as [];
+        dispatch({
+            type: 'ADD_POSTS',
+            payload: result
+        });
+    },
     editPost(dispatch: Dispatch, data: post): void {
         // Should be called methods.put
         dispatch({
             type: 'LOAD_POSTS',
             payload: null
         });
+        // fake edit
         const result = ([data] as unknown) as [];
         dispatch({
-            type: 'GET_POSTS',
+            type: 'EDIT_POSTS',
             payload: result
         });
         // we can also call getPost to update data rendered

@@ -24,9 +24,6 @@ const EditPostPage: FC = () => {
 
     const sendData = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // const data: post = {
-        //     id: e.target[0].value;
-        // }
         const _id = (e.currentTarget.id as unknown) as HTMLInputElement;
         const userId = (e.currentTarget.userId as unknown) as HTMLInputElement;
         const title = (e.currentTarget.title as unknown) as HTMLInputElement;
