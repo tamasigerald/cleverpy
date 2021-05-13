@@ -13,6 +13,14 @@ export interface post {
     author: string;
 }
 
+export interface comment {
+    id: number;
+    postId: number;
+    email: string;
+    name: string;
+    body: string;
+}
+
 export interface loggedUser {
     username: string;
     token?: string;

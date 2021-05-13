@@ -1,4 +1,7 @@
 .post {
+
+    margin-bottom: $-s-xxl;
+
     &__title {
         font-size: 4rem;
         font-weight: $-t-semi;
@@ -12,11 +15,11 @@
 
     &__date {
         color: $-c-green;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         margin-bottom: $-s-xxl;
     }
 
     &__body {
-        margin-bottom: $-s-md;
+        margin-bottom: $-s-sm;
     }
 }

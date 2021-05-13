@@ -20,7 +20,7 @@ const PostCard: FC<PostCardType> = ({ post, users, posts }) => {
     };
     return (
         <div className="card card-post">
-            <Link to={`/post/${post.id}`} className="card__title">
+            <Link to={`/post/${post.id}`} className="card__title card__title--link">
                 {post.title}
             </Link>
             <div className="card__author">{getUsername(users, post)}</div>

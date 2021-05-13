@@ -7,6 +7,10 @@
     padding: $-s-sm $-s-xs;
     width: 100%;
 
+    &--post {
+        margin: $-s-sm 0;
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -23,9 +27,15 @@
         transition: 0.5s;
         width: 100%;
 
-        &:hover {
-            background-color: $-c-gray-10;
+        &--link {
+            &:hover {
+                color: $-c-green;
+            }
         }
+    }
+
+    &__body {
+        padding: $-s-xs 0;
     }
 
     &__author {

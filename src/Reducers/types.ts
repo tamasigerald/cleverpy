@@ -4,6 +4,7 @@ import { loggedUser } from './../Helpers/globalTypes';
 export interface StateType {
     posts?: [] | null;
     users?: [] | null;
+    comments?: [] | null;
     logged?: boolean;
     loggedUser?: loggedUser | null;
     checked?: boolean;
